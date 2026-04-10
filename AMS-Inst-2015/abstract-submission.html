@@ -1,0 +1,163 @@
+<html>
+    
+<head>
+<link  rel="stylesheet" type="text/css">
+    
+<style>
+
+a 		{ color:#cc0000; text-decoration:none; border:none; }
+body 		{ font-family:Muli, Arial, sans-serif; font-size:15px; margin: 60px;}
+
+table		{ text-align:left; font-family:Muli, Arial, sans-serif; font-size:15px; }
+table td 	{ padding: 5px 5px; }
+
+
+h2 		{ font-size:25px; font-weight:lighter; color:#666666; }
+
+</style>
+
+<title>
+Abstract submission 
+</title>
+
+</head>
+
+
+<body> 
+
+ 
+
+<script language="javascript" type="text/javascript">
+// <![CDATA[
+var nReload = 5;
+
+function NewVerifyImage()
+{
+    if (nReload <= 2)
+        if (nReload <= 0)
+        {
+            alert("Sorry, too many reloads.");
+            return;
+        }
+        else
+            alert("Only " + nReload + " more reloads are allowed");
+    nReload--;
+
+        //
+        // This code now works in both IE and FireFox
+        //
+    var         e_img;
+
+    e_img = document.getElementById("vimg");
+    if (e_img)
+                //
+                // FireFox attempts to "optimize" by not reloading
+                // the image if the URL value doesn't actually change.
+                // So, we make it change by adding a different
+                // count parameter for each reload.
+                //
+        e_img.setAttribute("src",e_img.src+'?count='+nReload);
+}
+// ]]>
+</script>
+
+
+
+    
+    <h2>Application for contributed talk and/or poster presentation</h2>
+    
+      <form action="http://www.math.utah.edu/~defernex/AMS-Inst-2015/formmail.php" method="post" name="AmsInst15">
+	<input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
+	<input type="hidden" name="recipients" value="abstract.SLC2015@gmail.com" />
+	<INPUT TYPE="hidden" NAME="subject" VALUE="Abstract Submission">
+	<INPUT TYPE="hidden" NAME="from-name" VALUE="Abstract Submission">
+	<input type="hidden" name="derive_fields" value="email=EmailAddr,realname=FullName" />
+	<input type="hidden" name="mail_options" value="Exclude=email;realname" />
+
+
+	 <fieldset>
+         <legend>Abstract submission</legend>
+	 
+	 <table width="800">
+	    <tr>
+	        <td width="300">Name:</td>
+	        <td><input type="text" name="FullName" size="60px" required></td>
+	    </tr>
+	    <tr>
+		<td>Email:</td>
+		<td><input type="email" name="EmailAddr" size="60px" required></td>
+	    </tr>
+	    <tr>
+	        <td>Weeks you plan to attend:</td>
+	        <td>
+		    <input type="checkbox" name="Weeks attended" value="First week" required> First week &nbsp;
+		    <input type="checkbox" name="Weeks attended" value="Second week"> Second week &nbsp;
+		    <input type="checkbox" name="Weeks attended" value="Third week"> Third week 
+		</td>
+	    </tr>
+	        <td>Week you prefer to present:</td>
+	        <td>
+		    <input type="radio" name="Week of presentation" value="First week" required> First week &nbsp;
+		    <input type="radio" name="Week of presentation" value="Second week"> Second week &nbsp;
+		    <input type="radio" name="Week of presentation" value="Third week"> Third week 
+		</td>
+	    </tr>
+	    <tr>
+	        <td>Type of presentation:</td>
+	        <td>
+		    <input type="radio" name="Type of presentation" value="Talk" required> Contributed talk &nbsp;
+		    <input type="radio" name="Type of presentation" value="Poster"> Poster
+		</td>
+	    </tr>
+	    <tr>
+	        <td>If you selected "Contributed talk" but there are no available slots, would you be interested
+		in presenting a poster instead?</td>
+	        <td>
+		    <input type="radio" name="Poster instead?" value="Yes" required> Yes &nbsp;
+		    <input type="radio" name="Poster instead?" value="No"> No
+		</td>
+	    </tr>
+	    <tr>
+		<td>Title:</td>
+		<td><input type="text" name="Title" size="60px" required></td>
+	    </tr>
+	    <tr>
+		<td>Abstract:<br><span style="font-size:80%;">(ASCII text only please, do not use LaTeX symbols)</span></td>
+		<td><textarea name="Abstract" rows="6" cols="60px" required></textarea></td>
+	    </tr>
+	 </table>
+	 </fieldset><br>
+	 
+	 
+        <p><img src="http://www.math.utah.edu/agtrtg/traintracks/application/verifyimg.php" alt="Image verification" name="vimg" id="vimg" />
+	<span style="font-size:80%;">If you cannot read the image, click for a new one</span> &nbsp;
+            <button onclick="NewVerifyImage(); return false;">
+            New image
+            </button>
+        </p>
+          <p>To submit this form, please enter the characters you see in the image:
+	     <input type="text" size="10" name="imgverify" REQUIRED/>&nbsp;
+	     <a href="http://www.math.utah.edu/agtrtg/traintracks/application/imgverifywhy.html" target="_blank">Why?</a>
+	  </p>
+	  
+      <input value="Submit" name="submit" type="submit">
+      </form>
+    
+ 
+
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

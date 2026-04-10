@@ -1,0 +1,391 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsfonts,amssymb,amsthm,amsmath,amsxtra,amscd,verbatim,eucal}
+\usepackage[all]{xy}
+\usepackage[dvips]{graphics}
+%\input{psfig}
+
+% MACRO
+
+% Theorem etc...
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+%\newtheorem{thm}{Theorem}%[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem*{subproblem}{Sub-Problem}
+\renewcommand{\theproblem}{\Alph{problem}}
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{nt}[thm]{Notations}
+\newtheorem*{maingoal}{Main Goal}
+\newtheorem{property}[thm]{Property}
+\newtheorem*{question}{Question}
+\newtheorem{eg}[thm]{Example}
+\newtheorem{egs}[thm]{Examples}
+
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\newtheorem{su}[thm]{Setup}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{sk}[thm]{Sketch}
+\newtheorem{appl}[thm]{Applications}
+\newtheorem{comp}[thm]{Complement}
+\newtheorem{comm}[thm]{Comment}
+\newtheorem{ass}[thm]{Assumption}
+\newtheorem{step}{Step}
+\newtheorem{case}{Case}
+
+%\numberwithin{equation}{section}
+
+%\renewcommand{\labelenumi}{(\alph{enumi})}
+
+% Abbreviations
+
+\def\Z{{\mathbb Z}}
+\def\N{{\mathbb N}}
+\def\F{{\mathbb F}}
+\def\C{{\mathbb C}}
+\def\A{{\mathbb A}}
+\def\R{{\mathbb R}}
+\def\Q{{\mathbb Q}}
+\def\P{{\mathbb P}}
+\def\L{{\mathbb L}}
+
+\def\AA{\mathcal{A}}
+\def\B{\mathcal{B}}
+\def\CC{\mathcal{C}}
+\def\DD{\mathcal{D}}
+\def\E{\mathcal{E}}
+\def\FF{\mathcal{F}}
+\def\G{\mathcal{G}}
+\def\H{\mathcal{H}}
+\def\K{\mathcal{K}}
+\def\JJ{\mathcal{J}}
+\def\O{\mathcal{O}}
+\def\LL{\mathcal{L}}
+\def\M{\mathcal{M}}
+\def\NN{\mathcal{N}}
+\def\U{\mathcal{U}}
+\def\V{\mathcal{V}}
+\def\J{\mathcal{J}}
+\def\I{\mathcal{I}}
+\def\RR{\mathcal{R}}
+\def\SS{\mathcal{S}}
+\def\PP{\mathcal{P}}
+\def\QQ{\mathcal{Q}}
+\def\XX{\mathcal{X}}
+\def\YY{\mathcal{Y}}
+
+\def\aa{\mathfrak{a}}
+\def\bb{\mathfrak{b}}
+\def\cc{\mathfrak{c}}
+\def\dd{\mathfrak{d}}
+\def\mm{\mathfrak{m}}
+\def\DDD{\mathfrak{D}}
+
+\def\X{\mathfrak{X}}                          % deformation family
+\def\MM{\mathfrak{M}}                          % deformation family
+
+\def\ee{{\bf e}}
+\def\cc{{\bf c}}
+\def\1{{\bf 1}}
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\g{\gamma}
+\def\d{\delta}
+\def\f{\phi}
+\def\ff{\psi}
+\def\e{\eta}
+\def\ep{\epsilon}
+\def\k{\kappa}
+\def\l{\lambda}
+\def\n{\nu}
+\def\m{\mu}
+\def\om{\omega}
+\def\p{\pi}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\q{\chi}
+\def\x{\xi}
+\def\z{\zeta}
+\def\D{\Delta}
+\def\G{\Gamma}
+\def\LLL{\Lambda}
+\def\S{\Sigma}
+\def\Om{\Omega}
+
+\def\o{\circ}
+\def\ov{\overline}
+\def\rat{\dashrightarrow}                      %arrows
+\def\surj{\twoheadrightarrow}
+\def\inj{\hookrightarrow}
+\def\contr{\rightsquigarrow}
+\def\de{\partial}
+\def\lru{\lceil}
+\def\rru{\rceil}
+\def\lrd{\lfloor}
+\def\rrd{\rfloor}
+
+\def\.{\cdot}
+\def\({\Big{(}}
+\def\){\Big{)}}
+\def\^{\widehat}
+\def\~{\widetilde}
+\def\-{\renewcommand{\labelenumi}{\bfseries --}}
+
+% Math. operators
+
+\DeclareMathOperator{\codim} {codim}
+\DeclareMathOperator{\coker} {coker}
+\DeclareMathOperator{\rk} {rk}
+\DeclareMathOperator{\im} {Im}
+\DeclareMathOperator{\dimr} {dim_\R}
+\DeclareMathOperator{\dimc} {dim_\C}
+\DeclareMathOperator{\GL}  {GL}
+\DeclareMathOperator{\PGL}  {PGL}
+\DeclareMathOperator{\SO}  {SO}
+\DeclareMathOperator{\SP}  {SP}
+\DeclareMathOperator{\Tr}  {Tr}
+\DeclareMathOperator{\Gr} {Gr}
+\DeclareMathOperator{\SL}  {SL}
+\DeclareMathOperator{\SU}  {SU}
+\DeclareMathOperator{\NE} {NE}
+\DeclareMathOperator{\CNE} {\ov{\NE}}
+\DeclareMathOperator{\Amp} {Amp}
+\DeclareMathOperator{\CAmp} {\ov{\Amp}}
+\DeclareMathOperator{\Proj} {Proj}
+\DeclareMathOperator{\Spec} {Spec}
+\DeclareMathOperator{\Alb} {Alb}
+\DeclareMathOperator{\Pic} {Pic}
+\DeclareMathOperator{\NS} {NS}
+\DeclareMathOperator{\Aut} {Aut}
+\DeclareMathOperator{\Bir} {Bir}
+\DeclareMathOperator{\End} {End}
+\DeclareMathOperator{\Sing} {Sing}
+\DeclareMathOperator{\Sec} {Sec}
+\DeclareMathOperator{\Bl} {Bl}
+\DeclareMathOperator{\Ch} {Ch}
+\DeclareMathOperator{\depth} {depth}
+\DeclareMathOperator{\NFC} {NFC}
+\DeclareMathOperator{\Mov} {Mov}
+\DeclareMathOperator{\mult} {mult}
+\DeclareMathOperator{\ord} {ord}
+\DeclareMathOperator{\bs}{\mathfrak{b}}
+\DeclareMathOperator{\T} {T}
+\DeclareMathOperator{\Div} {Div}
+\DeclareMathOperator{\fix} {R}
+\DeclareMathOperator{\Gal} {Gal}
+\DeclareMathOperator{\Sym} {Sym}
+\DeclareMathOperator{\Supp} {Supp}
+\DeclareMathOperator{\invlim} {\varinjlim}                      %limit
+\DeclareMathOperator{\dirlim} {\varprojlim}
+\DeclareMathOperator{\Vol} {Vol}
+\DeclareMathOperator{\ini} {in}
+\DeclareMathOperator{\gin} {gin}
+\DeclareMathOperator{\lc} {lc}
+\DeclareMathOperator{\Mot} {Mot}
+\DeclareMathOperator{\Obj} {Obj}
+\DeclareMathOperator{\Sch} {\mathfrak{Sch}}
+\DeclareMathOperator{\Var} {\mathfrak{Var}}
+\DeclareMathOperator{\DM} {\mathfrak{DM}}
+\DeclareMathOperator{\Orb}{\mathfrak{Orb}}
+\DeclareMathOperator{\Joint} {Join}
+\DeclareMathOperator{\length} {\ell}
+\DeclareMathOperator{\Int} {Int}
+\DeclareMathOperator{\st} {str}
+\DeclareMathOperator{\SM} {SM}
+
+
+% Miscellaneous
+
+\newcommand{\nz}{\rule{0in}{0in}\\}
+%\setlength{\parindent}{0in}
+\hfuzz50pc  % Don't bother to report overfull boxes if overage is < 50pc
+\vfuzz50pc
+\sloppy
+\setcounter{section}{0}%\pagestyle{plain}
+
+% Page Format
+
+                      % A4 format     % US format
+\oddsidemargin 0.4 cm           % 0.9 cm        % 0.8 cm
+\evensidemargin 0.4 cm          % 0.9 cm        % 0.8 cm
+\textheight 22.7 cm             % 23 cm         % 21.8 cm
+\textwidth 15.1 cm              % 14.1 cm       % 15.1 cm
+\topmargin -0.2 cm                 % 0 in          % 0 in
+%\footskip 1.5 cm                  % 1 cm          % 1 cm
+%\parskip 0.3 cm
+
+
+\pagestyle{plain}
+
+% END OF MACRO
+
+
+\begin{document}
+
+\begin{center}
+{\bf Publications}
+
+\smallskip
+Tommaso de Fernex
+
+\end{center}
+\vskip0.5cm
+%\bigskip
+
+
+\begin{enumerate}
+%\item
+%T. de Fernex, T. Nevins and B. Uribe,
+%Chern classes of Deligne--Mumford stacks.
+%In preparation.
+%\medskip
+%\item
+%T. de Fernex and T. Nevins,
+%Motivic integration with values in derived category.
+%In preparation.
+%\medskip
+\item
+T. de Fernex and C. Hacon,
+Deformations of $\Q$-factorial varieties and of Fano varieties.
+In preparation.
+\medskip
+\item
+T. de Fernex and C. Hacon,
+Singularities on normal varieties.
+In preparation.
+\medskip
+\item
+T. de Fernex and M. Musta\c t\v a,
+Limits of log canonical thresholds.
+In preparation.
+\medskip
+\item
+T. de Fernex,
+Special restrictions of multiplier ideals.
+In preparation.
+\medskip
+\item
+T. de Fernex, L. Ein and S. Ishii,
+Divisorial valuations via arcs.
+In review for publication.
+\medskip
+\item
+M. C. Beltrametti, T. de Fernex and L. Lanteri,
+Ample subvarieties and rationally connected fibrations.
+Submitted for publication.
+\medskip
+%\item
+%T. de Fernex, L. Ein and M. Musta\c t\v a,
+%Applications of vanishing theorems and multiplier ideals}.
+%Monograph in preparation.
+%\medskip
+%\item
+%T. de Fernex,
+%Application of multiplier ideals and arc spaces to birational rigidity.
+%Submitted for publication.
+%\medskip
+%\item
+%T. de Fernex,
+%Adjunction beyond thresholds and birationally rigid hypersurfaces.
+%Submitted for publication.
+%Available as E-print {\tt math.AG/0604213}.
+%\medskip
+\item
+T. de Fernex, A. K\"uronya and R. Lazarsfeld,
+Higher cohomology of divisors on a projective variety.
+{\it Math. Ann.} {\bf 337} (2007), 443--455.
+\medskip
+\item
+T. de Fernex, E. Lupercio, T. Nevins and B. Uribe,
+Stringy Chern classes of singular varieties.
+{\it Adv. Math.} {\bf 208} (2007), 597--621.
+\medskip
+\item
+T. de Fernex, E. Lupercio, T. Nevins and B. Uribe,
+A localization principle for orbifold theories.
+In ``Recent Developments in Algebraic Topology,'' A. Adem et al. eds.,
+Proceedings for the Conference in honor of the 70th birthday of S. Gitler,
+113--133, {\it Contemp. Math.} {\bf 407},
+Amer. Math. Soc., Providence, RI, 2006.
+\medskip
+\item
+T. de Fernex,
+Length, multiplicity, and multiplier ideals.
+{\it Trans. Amer. Math. Soc.} {\bf 358} (2006), 3717--3731.
+\medskip
+\item
+T. de Fernex,
+Negative curves on very general blow-ups of $\mathbb P^2$.
+%Proceedings for the Conference ``
+{\it Projective Varieties with Unexpected Properties,}
+A Volume in Memory of Giuseppe Veronese,
+%in honour of the 150th
+%anniversary of the birth of Giuseppe Veronese, Siena 2004,
+199--207, de Gruyter, Berlin, 2005.
+\medskip
+\item
+T. de Fernex and A. Lanteri,
+Bad loci of free linear systems.
+{\it Adv. Geom.} {\bf 6} (2005), 93--107.
+\medskip
+\item
+T. de Fernex, L. Ein and M. Musta\c t\v a,
+Bounds on log canonical thresholds with application to birational rigidity.
+{\it Math. Res. Lett.}  \textbf{10} (2003), 219--236.
+\medskip
+\item
+T. de Fernex, L. Ein and M. Musta\c t\v a,
+{Multiplicities and log canonical threshold}.
+{\it J.~Algebraic Geom.} \textbf{13} (2004), 603--615.
+\medskip
+\item
+T. de Fernex,
+{On planar Cremona maps of prime order},
+{\it Nagoya Math. J.} \textbf{174} (2004), 1--28.
+\medskip
+\item
+T. de Fernex and L. Ein,
+{Resolution of indeterminacy of pairs}.
+{\it Algebraic Geometry},
+a Volume in Memory of Paolo Francia,
+%(M. C. Beltrametti, F. Catanese, C. Ciliberto, A. Lanteri, C. Pedrini, Eds),
+165--177, de Gruyter, Berlin, 2002.
+\medskip
+\item
+T. de Fernex,
+{Ample vector bundles and intrinsic quadric fibrations
+over irrational curves}.
+{\it Ma\-te\-ma\-tiche (Catania)}, \textbf{55} (2000), 205--222.
+\medskip
+\item
+T. de Fernex and A. Lanteri,
+{Ample vector bundles and del Pezzo manifolds}.
+{\it Kodai Math. J.} \textbf{22} (1999), 85--100.
+\medskip
+\item
+T. de Fernex,
+{Ample vector bundles with sections vanishing
+along conic fibrations over curves}.
+{\it Collect. Math.} \textbf{49} (1998), 67--79.
+\end{enumerate}
+%Articles 1--9 and 11--12 are available
+%at {\tt www.math.lsa.umich.edu/$^{\sim}$defernex}.
+
+
+
+
+
+
+
+
+\end{document}

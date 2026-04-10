@@ -1,0 +1,644 @@
+% Curriculum Vitae of Tommaso de Fernex
+% Updated as of April 9, 2004
+
+\documentclass{article}
+\usepackage{amsfonts,amssymb,amsthm,amsmath}%amsxtra,amscd,verbatim,eucal}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0 in}
+\setlength{\textwidth}{6 in}
+\setlength{\textheight}{8.6in} %9.5in
+\setlength{\topmargin} {-0.3 in}
+\setlength{\evensidemargin}{.25 in}
+\setlength{\oddsidemargin}{.25 in}
+
+\pagestyle{empty}
+
+%=========================================================================
+% New Definitions
+%=========================================================================
+% \name{NAME-OF-PERSON}
+%       Display a centered NAME-OF-PERSON of a certain size.
+%       A line is placed underneath, which spans the width of the
+%       page.  The name is lowered so that is hovers above
+%       this line.
+%       NOTE: if you want text directly underneath this command,
+%             do not put a blank line in between.
+%
+\newcommand{\name}[1]{
+  \begin{center}
+    \raisebox{-1.4ex}{\Large #1}
+  \end{center}
+}
+
+%-------------------------------------------------------------------------
+%\newcommand{\addrtype}{\sl}            % Type style for addresses
+%\newcommand{\addrwidth}{2in}           % Width of addresses
+
+% ENVIRONMENT: \begin{address}
+%       Display an address.
+%       The address is in a minipage of width \addrwidth.  The type
+%       style of the address is \addrtype.
+%
+%\newenvironment{address}{\begin{minipage}[t]{\addrwidth}
+%       \addrtype}{\end{minipage}}
+
+% David Carlton sez: I don't recall ever used the above, and I don't
+% remember if it was commented out when I got this or if that's my
+% innovation.  Feel free to play with it yourself...
+
+%-------------------------------------------------------------------------
+
+% The body of the resume should all be in one big categories
+% environment.  Start a new category with \category, start a new entry
+% within the category with \entry.  Leave a blank line between entries
+% (and between categories).  \entry takes two arguments: the topic of
+% the entry (which is in boldface and on a line by itself) and the
+% body of the entry.  If you don't want that format, use \rawentry
+% instead; it takes one argument, the body of the entry, and you can
+% format that however you want.  Within that body, if you want a line
+% break, use \\; also, \\ works in the argument to \category.
+
+\newcommand{\categorywidth}{1.0in}        % Width of categories (left side)
+\newcommand{\infowidth}{4.9in}          % Width of info (right side)
+\newcommand{\categorysep}{1pt}
+
+\newcommand{\catlistlabel}[1]%
+{\raisebox{0pt}[1ex][0pt]{\makebox[\labelwidth][l]%
+    {\parbox[t]{\labelwidth}{\hspace{0pt}\text{#1}}}}}
+\newenvironment{categories}{\begin{list}{}{
+      \setlength{\labelwidth}{\categorywidth}
+      \setlength{\leftmargin}{\labelwidth}
+      \addtolength{\leftmargin}{\labelsep}
+%      \setlength{\rightmargin}{0pt}
+      \setlength{\topsep}{15pt}
+      \setlength{\itemsep}{\categorysep}
+      \renewcommand{\makelabel}{\catlistlabel}
+      }}{\end{list}}
+
+\newcommand{\category}[1]{\item[#1]}
+
+\newcommand{\topic}[1]{
+  {\textbf{#1}}}
+\newcommand{\rawentry}[1]{{\begin{minipage}[t]{\infowidth}{#1}
+    \end{minipage}}}
+\newcommand{\entry}[2]{\rawentry{{\topic{#1}\\}{#2}}}
+
+%*************************************************************************
+% Document
+%*************************************************************************
+\begin{document}
+%\begin{flushleft}
+
+%=========================================================================
+% Name
+%=========================================================================
+
+\name{TOMMASO de FERNEX}
+\rule{6in}{.05cm}
+\vspace{.15ex}
+
+%=========================================================================
+% Addresses
+%=========================================================================
+
+%{\em Contact Information:}  \hfill
+%\\
+%%IAS%%
+Department of Mathematics \hfill Phone: (801) 581-7121
+\\
+University of Utah \hfill Fax: +1 (801) 581-6851
+\\
+155 South 1400 East \hfill {\tt defernex@math.utah.edu}
+\\
+Salt Lake City, UT 84112 \hfill {\tt www.math.utah.edu/$^{\sim}$defernex}
+
+%%UTAH%%
+%
+%Department of Mathematics \hfill Phone: (734) 272-9610
+%\\
+%University of Utah \hfill Fax:  (801) 581-6851
+%\\
+%155 South 1400 East  \hfill {\tt defernex@math.utah.edu}
+%\\
+%Salt Lake City, UT 48112-0090 \hfill {\tt www.math.utah.edu/$^{\sim}$defernex}
+%\\
+
+
+%=========================================================================
+% Body
+%       Must have space between sections.
+%=========================================================================
+
+\smallskip
+
+\begin{center}
+{\sc Personal}
+\end{center}
+
+\begin{categories}
+\category{Citizenship}
+\rawentry{Italian.}
+\category{Current status}
+\rawentry{U.S. permanent resident.}
+\end{categories}
+
+\begin{center}
+{\sc Research Interests}
+\end{center}
+\medskip
+
+Algebraic geometry.
+Specific topics include birational geometry, singularity theory, and
+classification.
+
+\medskip
+\begin{center}
+{\sc Education}
+\end{center}
+
+\begin{categories}
+\category{July 2002}
+\rawentry{ Ph.D. in Mathematics,
+University of Illinois at Chicago.}
+%\\
+%Dissertation under the supervision of Professor Lawrence Ein.}
+\category{February 2001}
+\rawentry{Dottorato di Ricerca in Matematica,
+Universit\`a di Genova.}
+%\\
+%Dissertation under the supervision of Professor Lawrence Ein.}
+\category{February 1996}
+\rawentry{Laurea in Matematica (summa cum laude),
+Universit\`a di Milano.}
+%\\
+%Dissertation under the supervision of Professor Antonio Lanteri.}
+\end{categories}
+
+\begin{center}
+{\sc Appointments}
+\end{center}
+
+\begin{categories}
+\category{07/05--present}
+\rawentry{Assistant Professor (Tenure-Track),
+University of Utah.}
+\category{09/05--04/06}
+\rawentry{Member, Institute for Advanced Study.}
+\category{08/02--07/05}
+\rawentry{T. H. Hildebrandt Research Assistant Professor,
+University of Michigan.}
+\category{09/99--12/99}
+\rawentry{Visiting Research Assistant,
+University of Hong Kong.}
+\end{categories}
+
+\begin{center}
+{\sc Honors and Awards}
+\end{center}
+
+\begin{categories}
+\category{2005--2011}
+\rawentry{John E. and Marva M. Warnock Presidential
+Endowed Chair for Faculty Development (co-holder with Jared Tanner),
+University of Utah.}
+\category{2005--2006}
+\rawentry{NSF Grant DMS-0111298.}
+\category{2005--2008}
+\rawentry{NSF Grant DMS-0548325.}
+\category{2002--2005}
+\rawentry{Rackham Research Grant, University of Michigan.}
+\category{Summer 2002}
+\rawentry{Rackham Faculty Summer Fellowship, University of Michigan.}
+\category{2002--2005}
+\rawentry{T. H. Hildebrandt Research Assistant Professorship,
+University of Michigan.}
+\category{2000--2001}
+\rawentry{University Fellowship, University of Illinois at Chicago.}
+\category{1996--2000}
+\rawentry{Doctoral Scholarship, Universit\`a di Genova.}
+\end{categories}
+
+
+\smallskip
+\begin{center}
+{\sc Publications}
+\end{center}
+\vskip10pt
+
+\begin{enumerate}
+%\item
+%T. de Fernex, T. Nevins and B. Uribe,
+%Chern classes of Deligne--Mumford stacks.
+%In preparation.
+%\medskip
+%\item
+%T. de Fernex and T. Nevins,
+%Motivic integration with values in derived category.
+%In preparation.
+%\medskip
+%\item
+%T. de Fernex and C. Hacon,
+%Deformations of $\Q$-factorial varieties and Fano varieties.
+%In preparation.
+%\medskip
+%\item
+%T. de Fernex and C. Hacon,
+%Singularities on normal varieties.
+%In preparation.
+%\medskip
+%\item
+%T. de Fernex and M. Musta\c t\v a,
+%Limits of log canonical thresholds.
+%In preparation.
+%\medskip
+%\item
+%T. de Fernex,
+%Special restrictions of multiplier ideals.
+%In preparation.
+%\medskip
+\item
+T. de Fernex, L. Ein and S. Ishii,
+Divisorial valuations via arcs.
+In review for publication.
+\medskip
+\item
+M. C. Beltrametti, T. de Fernex and L. Lanteri,
+Ample subvarieties and rationally connected fibrations.
+Submitted for publication.
+\medskip
+%\item
+%T. de Fernex, L. Ein and M. Musta\c t\v a,
+%Applications of vanishing theorems and multiplier ideals}.
+%Monograph in preparation.
+%\medskip
+%\item
+%T. de Fernex,
+%Application of multiplier ideals and arc spaces to birational rigidity.
+%Submitted for publication.
+%\medskip
+%\item
+%T. de Fernex,
+%Adjunction beyond thresholds and birationally rigid hypersurfaces.
+%Submitted for publication.
+%Available as E-print {\tt math.AG/0604213}.
+%\medskip
+\item
+T. de Fernex, A. K\"uronya and R. Lazarsfeld,
+Higher cohomology of divisors on a projective variety.
+{\it Math. Ann.} {\bf 337} (2007), 443--455.
+\medskip
+\item
+T. de Fernex, E. Lupercio, T. Nevins and B. Uribe,
+Stringy Chern classes of singular varieties.
+{\it Adv. Math.} {\bf 208} (2007), 597--621.
+\medskip
+\item
+T. de Fernex, E. Lupercio, T. Nevins and B. Uribe,
+A localization principle for orbifold theories.
+In ``Recent Developments in Algebraic Topology,'' A. Adem et al. eds.,
+Proceedings for the Conference in honor of the 70th birthday of S. Gitler,
+113--133, {\it Contemp. Math.} {\bf 407},
+Amer. Math. Soc., Providence, RI, 2006.
+\medskip
+\item
+T. de Fernex,
+Length, multiplicity, and multiplier ideals.
+{\it Trans. Amer. Math. Soc.} {\bf 358} (2006), 3717--3731.
+\medskip
+\item
+T. de Fernex,
+Negative curves on very general blow-ups of $\mathbb P^2$.
+%Proceedings for the Conference ``
+{\it Projective Varieties with Unexpected Properties,}
+A Volume in Memory of Giuseppe Veronese,
+%in honour of the 150th
+%anniversary of the birth of Giuseppe Veronese, Siena 2004,
+199--207, de Gruyter, Berlin, 2005.
+\medskip
+\item
+T. de Fernex and A. Lanteri,
+Bad loci of free linear systems.
+{\it Adv. Geom.} {\bf 6} (2005), 93--107.
+\medskip
+\item
+T. de Fernex, L. Ein and M. Musta\c t\v a,
+Bounds on log canonical thresholds with application to birational rigidity.
+{\it Math. Res. Lett.}  \textbf{10} (2003), 219--236.
+\medskip
+\item
+T. de Fernex, L. Ein and M. Musta\c t\v a,
+{Multiplicities and log canonical threshold}.
+{\it J.~Algebraic Geom.} \textbf{13} (2004), 603--615.
+\medskip
+\item
+T. de Fernex,
+{On planar Cremona maps of prime order},
+{\it Nagoya Math. J.} \textbf{174} (2004), 1--28.
+\medskip
+\item
+T. de Fernex and L. Ein,
+{Resolution of indeterminacy of pairs}.
+{\it Algebraic Geometry},
+a Volume in Memory of Paolo Francia,
+%(M. C. Beltrametti, F. Catanese, C. Ciliberto, A. Lanteri, C. Pedrini, Eds),
+165--177, de Gruyter, Berlin, 2002.
+\medskip
+\item
+T. de Fernex,
+{Ample vector bundles and intrinsic quadric fibrations
+over irrational curves}.
+{\it Ma\-te\-ma\-tiche (Catania)}, \textbf{55} (2000), 205--222.
+\medskip
+\item
+T. de Fernex and A. Lanteri,
+{Ample vector bundles and del Pezzo manifolds}.
+{\it Kodai Math. J.} \textbf{22} (1999), 85--100.
+\medskip
+\item
+T. de Fernex,
+{Ample vector bundles with sections vanishing
+along conic fibrations over curves}.
+{\it Collect. Math.} \textbf{49} (1998), 67--79.
+\end{enumerate}
+%Articles 1--9 and 11--12 are available
+%at {\tt www.math.lsa.umich.edu/$^{\sim}$defernex}.
+
+\newpage
+
+\smallskip
+\begin{center}
+{\sc Conference Talks}
+\end{center}
+\vskip10pt
+
+\begin{enumerate}
+\item
+Special session on "Birational algebraic geometry",
+Spring Central Section Meeting, Indiana University, April 2008. (Expected.)
+\item
+Workshop on ``Higher Dimensional Algebraic Geometry",
+National Taiwan University, Taiwan, March 2007.
+\item
+WAGS, University of Utah, November 2006.
+%Title: {\it Birational rigidity of hypersurfaces.}
+\item
+Special Session on ``Birational geometry",
+AMS Central Sectional Meeting, University of Cincinnati, October 2006.
+%Title: {\it Recent applications of multiplier ideals and arc spaces
+%to the rationality problem.}
+\item
+``Eighth Meeting on Commutative Algebra and Algebraic Geometry",
+IMPA, Rio de Janeiro, Brazil, July 2006.
+%Title: {\it Birational rigidity of hypersurfaces
+%via multiplier ideals and arc spaces.}
+\item
+Genova-Nice Meeting, Universit\`a di Genova, May 2006.
+%Title: {\it Adjunction beyond thresholds and birationally rigid hypersurfaces.}
+\item
+BIRS Workshop, ``Recent trends in higher dimensional geometry",
+Banff, Canada, April 2006.
+%Title: {\it Adjunction beyond thresholds and birationally rigid hypersurfaces.}
+\item
+JAMI Conference/Workshop 2006 on
+``Recent Developments in Higher Dimensional Algebraic Geometry",
+Johns Hopkins University, March 2006.
+%Title: {\it Adjunction beyond thresholds and birationally rigid hypersurfaces.}
+\item
+Conference on ``Singularity theory and commutative ring theory",
+Hamana-ko, Japan, September 2005.
+%Title: {\it Singularities of maps and birational geometry}.
+\item
+AGaFe 2005, Conference on ``Geometry of algebraic varieties",
+Universit\`a di Ferrara, June 2005.
+%Title: {\it An ampleness criterion in terms of growth rate
+%of higher cohomological dimensions.}
+\item
+VIGRE Mini-Course on ``Jet schemes and motivic integration" (5 lectures),
+University of Utah, May 2005.
+%Title: {\it Relative motivic integration, MacPherson's transformation,
+%and stringy Chern classes.}
+\item
+``Projective varieties with unexpected properties",
+Conference for the 150th anniversary of the birth of
+Giuseppe Veronese, Universit\`a di Siena, June 2004.
+%Title: {\it On the birational rigidity of Fano projective hypersurfaces.}
+\item
+The UM/OSU Algebraic Geometry Workshop,
+Ohio State University, March 2004.
+%Title: {\it Multiplicities and multiplier ideals.}
+\item
+Arithmetic and Algebraic Geometry Conference, University of Tokyo,
+January 2004.
+%Title: {\it Bounds on singularities and birational rigidity.}
+\item
+``Minimal Model Activity", Special Year in Algebraic Geometry and Topology,
+Australian National University, Canberra, August 2003.
+%Title: {\it Bounds on log canonical thresholds, with applications to
+%birational rigidity}.
+\item
+Conference in Algebraic Geometry in memory of Paolo Francia, Universit\`a
+di Genova, September 2001.
+%Title: {\it Birational transformations of prime order of the projective plane.}
+\item
+AGaFe 2001, School on ``Birational and projective geometry of algebraic
+varieties", University of Ferrara, September 2001.
+%Title: {\it Birational transformations of prime order of the projective plane.}
+\item
+Convegno di Geometria Algebrica ed Argomenti Correlati, Gargnano (Italy),
+May 2000.
+%Title: {\it Automorfismi di ordine primo di superfici algebriche con
+%fibrato canonico negativo.}
+\item
+Pragmatic 1998, School on ``Linear systems and vanishing theorems",
+Universit\`a di Catania, June 1998.
+%Title: {\it Ample vector bundles and Del Pezzo manifolds.}
+\end{enumerate}
+
+\smallskip
+
+\begin{center}
+{\sc Colloquia and Seminar Talks}
+\end{center}
+
+\begin{categories}
+\category{2007}
+\rawentry{University of Utah,
+University of Chicago,
+Purdue University.}
+\category{2006}
+\rawentry{Universit\`a di Milano,
+Universit\`a di Genova,
+Universit\`a di Ferrara,
+University of Michigan.}
+\category{2005}
+\rawentry{
+Queen's University,
+Harvard University,
+Columbia University,
+Institute for Advanced Study (member seminar),
+Princeton University,
+CIMAT--Guanajuato,
+CINVESTAV (colloquium),
+Universit\`a di Milano,
+SUNY--Stony Brook,
+Ohio State University (colloquium),
+Texas A\&M University (colloquium),
+University of Utah,
+University of Utah (colloquium),
+University of California-Santa Barbara (colloquium),
+Johns Hopkins University,
+University of Pittsburgh (colloquium),
+University of Kansas (colloquium),
+University of Illinois at Urbana-Champaign (colloquium),
+University of Notre Dame (colloquium).}
+\category{2004}
+\rawentry{University of Illinois  at Urbana-Champaign,
+University of Michigan,
+Northwestern University,
+University of Wisconsin--Madison,
+University of Tokyo,
+Kyoto University.}
+\category{2003}
+\rawentry{Johns Hopkins University,
+Universit\`a di Ge\-no\-va,
+University of Michigan.}
+\category{2002}
+\rawentry{University of Michigan,
+Universit\`a di Genova,
+Johns Hopkins University,
+University of Michigan.}
+\category{1999}
+\rawentry{Hong Kong University}
+\category{1998}
+\rawentry{Universit\`a di Milano,
+Universit\`a di Pavia.}
+\end{categories}
+
+\smallskip
+\begin{center}
+{\sc Teaching Experience}
+\end{center}
+
+\begin{categories}
+\category{2006--present}
+\rawentry{Instructor, University of Utah.
+\begin{itemize}
+\item
+Introduction to Modern Algebra (Math 5310), Fall 2007.
+\item
+Introduction to Algebraic Geometry II (Math 6140), Spring 2007.
+\item
+Topics in Algebraic Geometry (Math 7800), Fall 2006.
+\end{itemize}}
+\category{2002--2005}
+\rawentry{Instructor, University of Michigan.
+\begin{itemize}
+\item
+Introduction to Topology (Math 490), Winter 2005.
+\item
+Introduction to Topology (Math 590), Fall 2004.
+\item
+Linear Algebra (Math 217), Fall 2003.
+\item
+Introduction to Modern Algebra (Math 412), Winter 2003.
+\item
+Calculus I (Math 115), Fall 2002.
+\end{itemize}}
+\category{2000--2002}
+\rawentry{Teaching Assistant, University of Illinois at Chicago.
+\begin{itemize}
+\item
+Calculus I (Math 180), 2001-2002.
+\item
+Calculus II (Math 181), 2000-2001.
+\end{itemize}
+\category{1996--1998}
+\rawentry{Teaching Assistant, Universit\`a dell'Insubria.}
+\begin{itemize}
+\item
+Geometria IV, Spring 1998.
+\item
+Geometria III, Fall 1997.
+\item
+Geometria II, Spring 1996.
+\end{itemize}}
+\end{categories}
+
+\begin{center}
+{\sc Service}
+\end{center}
+
+\medskip
+Organizer for the Baby Algebraic Geometry Seminar (group reading course
+for graduate students), University of Utah, Fall 2007.
+
+\medskip
+Co-organizer for the conference
+Western Algebraic Geometry Seminar (WAGS),
+University of Utah, November 2006.
+
+\medskip
+Organizer and co-lecturer for the Special Topics in Algebraic Geometry Seminar,
+University of Michigan,
+Fall 2003, Winter 2004 and Fall 2004.
+%\begin{itemize}
+%\item
+%{\it Jet schemes and motivic integration}, Fall 2003.
+%\item
+%{\it Fano varieties}, Winter 2004.
+%\item
+%{\it $\mathcal D$-modules} (co-organizer with
+%Julianna Tymoczko and Bernardo Uribe), Fall 2004.
+%\end{itemize}
+
+\medskip
+Doctoral committee member:
+\begin{itemize}
+\item
+Ph.D. dissertation of
+Nguy$\Tilde{\Hat{\rm e}}$n Quang Minh,
+University of Michigan, December 2004.
+\item
+Ph.D. dissertation of Nero Budur,
+University of Illinois at Chicago, April 2003.
+\end{itemize}
+
+\medskip
+Referee for
+American Journal of Mathematics,
+Bulletin de la Soci\'et\'e Math\'ematique de France,
+Communications in Algebra,
+Compositio Mathematica,
+Geometriae Dedicata,
+Journal fuer die reine und angewandte Mathematik,
+Journal of Pure and Applied Algebra,
+Mathematische Annalen,
+Proceedings of the American Mathematical Society,
+Transaction of the American Mathematical Society,
+and conference proceedings.
+
+\medskip
+Reviewer for Mathematical Reviews
+%of the American Mathematical Society
+and Zentralblatt MATH.% of the European Mathematical Society.
+
+\medskip
+\begin{center}
+{\sc Professional Associations}
+\end{center}
+\vskip10pt
+
+\begin{itemize}
+\item
+American Mathematical Society.
+\item
+Istituto Nazionale di Alta Matematica, Gruppo G.N.S.A.G.A.
+\item
+Mathematical Association of America.
+\end{itemize}
+
+%\end{flushleft}
+\end{document}
+%*************************************************************************
