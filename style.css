@@ -30,7 +30,7 @@ body             { background: #999; color: #111; font-family: Helvetica, sans-s
 #fullname        { padding-top: 35px; font-size: 24px; font-weight: bold; margin: 0px; top: 0pt; font-variant: small-caps; 
                    font-family: Muli, Arial, Helvetica, sans-serif;}
 #name            { color: #eee; }
-#firstlastname   { color: #eee; }
+#firstlastname   { color: #e00; }
 #secondlastname  { color: #eee; }
 .access          { display: none; }
 
@@ -63,9 +63,6 @@ p                { margin-top: 1em; }
 #nav-teaching    { top: 180px; }
 .activebutton    { color: #e00; }
 #navigation      { position: absolute; top: 0; right: 0; z-index: 100; }
-
-a:focus,
-a:focus-visible  { outline: 3px solid #58f; outline-offset: 3px; }
 
 .sectitle        { position: relative; text-align: center; color: #fff; }
 .section h3      { position: relative; margin: 0px; padding: 5px 25px; height: 20px; color:#555555;
