@@ -1,6 +1,6 @@
 $(function () {
 
-  const sections = ["contact", "research", "activity", "teaching"];
+  const sections = ["contact", "research", "activity"];
   let currentSection = null;
   let fading = false;
 

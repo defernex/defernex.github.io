@@ -62,9 +62,9 @@ p                { margin-top: 1em; }
                    text-align: right; text-decoration: none; color: #eee; font-weight: bold;
                    border: 1px solid black; font-variant:small-caps; }
 .navitem:hover   { color: #e00; }
-#nav-contact     { top: 90px; }
-#nav-research    { top: 120px; }
-#nav-activity    { top: 150px; }
+#nav-contact     { top: 100px; }
+#nav-research    { top: 130px; }
+#nav-activity    { top: 160px; }
 #nav-teaching    { top: 180px; }
 .activebutton    { color: #e00; }
 #navigation      { position: absolute; top: 0; right: 0; z-index: 100; }
