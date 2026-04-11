@@ -25,6 +25,8 @@ body             { background: #999; color: #111; font-family: Helvetica, sans-s
 #shortcv-box td  { padding: 5px 15px; }
 #programs-box  { background: #fcfcfc; height: auto; text-indent: 50px; }
 #programs-box .seccontent { text-indent: 0px; }
+#activities-box { text-indent: 50px; }
+#activities-box .seccontent { text-indent: 0px; }
 
 #strip           { padding-top: 0px; height: 60px; background-color: #666; } 
 #fullname        { padding-top: 35px; font-size: 24px; font-weight: bold; margin: 0px; top: 0pt; font-variant: small-caps; 
@@ -33,6 +35,9 @@ body             { background: #999; color: #111; font-family: Helvetica, sans-s
 #firstlastname   { color: #e00; }
 #secondlastname  { color: #eee; }
 .access          { display: none; }
+
+/* Ensure the linked "DE" uses the same red color without inline styles */
+#firstlastname a { color: #e00; text-decoration: none; }
 
 .paper-title     { font-size: 15px; font-weight: normal; font-variant: small-caps; font-weight:normal; }
 .paper-info      { font-size: 12px; padding-left: 20px; position:relative; top: -1.2em; }
