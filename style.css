@@ -4,7 +4,7 @@ body             { background: #999; color: #111; font-family: Helvetica, sans-s
 
 #container       { position: relative; z-index: 0; width: 750px; height: auto; margin: 60px auto 40px; }
 
-.box             { background: #fcfcfc; padding: 0px 0px 20px; border: 2px solid black;  
+.box             { background: #fff; padding: 0px 0px 20px; border: 2px solid black;  
                    margin-bottom: 20px; position: relative; }
 
 #name-box        { z-index: 1; background: #eee; height: 210px; text-indent: 50px; }
@@ -15,29 +15,29 @@ body             { background: #999; color: #111; font-family: Helvetica, sans-s
 #teaching        { display: none; }
 #teaching td     { padding: 5px 15px; }
 
-#papers-box      { background: #fcfcfc; height: auto; text-indent: 50px; }
+#papers-box      { background: #fff; height: auto; text-indent: 50px; }
 #papers-box .seccontent { text-indent: 0px; }
 #papers-box td   { padding: 1px 0px; }
-#course-box      { background: #fcfcfc; height: auto; text-indent: 50px; }
+#course-box      { background: #fff; height: auto; text-indent: 50px; }
 #course-box .seccontent { text-indent: 0px; }
-#shortcv-box     { background: #fcfcfc; height: auto; text-indent: 50px; }
+#shortcv-box     { background: #fff; height: auto; text-indent: 50px; }
 #shortcv-box .seccontent { text-indent: 0px; }
 #shortcv-box td  { padding: 5px 15px; }
-#programs-box  { background: #fcfcfc; height: auto; text-indent: 50px; }
+#programs-box  { background: #fff; height: auto; text-indent: 50px; }
 #programs-box .seccontent { text-indent: 0px; }
 #activities-box { text-indent: 50px; }
 #activities-box .seccontent { text-indent: 0px; }
 
-#strip           { padding-top: 0px; height: 60px; background-color: #666; } 
+#strip           { padding-top: 0px; height: 60px; background-color: #555; } 
 #fullname        { padding-top: 35px; font-size: 24px; font-weight: bold; margin: 0px; top: 0pt; font-variant: small-caps; 
                    font-family: Muli, Arial, Helvetica, sans-serif;}
 #name            { color: #eee; }
-#firstlastname   { color: #e00; }
+#firstlastname   { color: #f00; }
 #secondlastname  { color: #eee; }
 .access          { display: none; }
 
 /* Ensure the linked "DE" uses the same red color without inline styles */
-#firstlastname a { color: #e00; text-decoration: none; }
+#firstlastname a { color: #f00; text-decoration: none; }
 
 .paper-title     { font-size: 15px; font-weight: normal; font-variant: small-caps; font-weight:normal; }
 .paper-info      { font-size: 12px; padding-left: 20px; position:relative; top: -1.2em; }
@@ -56,17 +56,17 @@ ol.mydec         { list-style-type:decimal; padding-left: 30px; }
 li               { margin-bottom: 10px; }
 p                { margin-top: 1em; }
 
-.navitem         { z-index: 101; display: block; font-size: 14px; background-color: #444; 
+.navitem         { z-index: 101; display: block; font-size: 14px; background-color: #333; 
 				   position: absolute; right: 50px; 
                    border-left: 3px solid #066; width: 75px; padding: 4px 15px;
                    text-align: right; text-decoration: none; color: #eee; font-weight: bold;
                    border: 1px solid black; font-variant:small-caps; }
-.navitem:hover   { color: #e00; }
+.navitem:hover   { color: #f00; }
 #nav-contact     { top: 100px; }
 #nav-research    { top: 130px; }
 #nav-activity    { top: 160px; }
 #nav-teaching    { top: 180px; }
-.activebutton    { color: #e00; }
+.activebutton    { color: #f00; }
 #navigation      { position: absolute; top: 0; right: 0; z-index: 100; }
 
 .sectitle        { position: relative; text-align: center; color: #fff; }
@@ -80,7 +80,7 @@ p                { margin-top: 1em; }
                    font-weight: bold; font-size: 16px; text-align: center; font-variant: small-caps; } 
 .secsubtitle     { position: relative; text-align: center; color: #fff; }
 .seccontent      { margin-top: 8px; padding: 30px 50px; line-height: 125%; text-align: left; }
-.section a       { color: #e00; text-decoration: none; }
+.section a       { color: #f00; text-decoration: none; }
 .section a:hover { text-decoration: underline; }
 
 #program-table   {position:relative; font-family:Helvetica, sans-serif; width:100%; border-collapse:collapse; }
